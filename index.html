@@ -59,7 +59,7 @@
                 type: "InitHdfc",
                 data: new Map(),
             };
-            webViewCallback.postMessage("hello hdfc user!");
+            window.webViewCallback.postMessage("hello hdfc user!");
             //window.webkit.messageHandlers.webViewCallback.postMessage(message);
             console.log("Init Hdfc Called.");
         }
