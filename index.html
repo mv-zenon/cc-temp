@@ -58,8 +58,8 @@
                     status: "Callback",
                     type: "InitHdfc",
                     data: "xyz"//new Map(),
-                }.toString();
-                window.webViewCallback.postMessage(message);
+                };
+                window.webViewCallback.postMessage(String(message));
             } catch (e) {
                 window.webViewCallback.printError(e.message);
             }
