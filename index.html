@@ -57,7 +57,10 @@
                 const message = {
                     status: "Callback",
                     type: "InitHdfc",
-                    data: "xyz"//new Map(),
+                    data: {
+                        xya: "abc",
+                        ash: "askl"
+                    },
                 };
                 window.webViewCallback.postMessage(JSON.stringify(message));
             } catch (e) {
