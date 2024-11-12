@@ -54,12 +54,11 @@
             // You can define the functionality here later
             console.log("Button clicked! Define your function body here.");
             try {
-                const event = "webViewCallback";
                 const message = {
                     status: "Callback",
                     type: "InitHdfc",
                     data: "xyz"//new Map(),
-                };
+                }.toString();
                 window.webViewCallback.postMessage(message);
             } catch (e) {
                 window.webViewCallback.printError(e.message);
