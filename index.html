@@ -59,7 +59,7 @@
                     type: "InitHdfc",
                     data: "xyz"//new Map(),
                 };
-                window.webViewCallback.postMessage(String(message));
+                window.webViewCallback.postMessage(JSON.stringify(message));
             } catch (e) {
                 window.webViewCallback.printError(e.message);
             }
