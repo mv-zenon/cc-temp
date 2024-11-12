@@ -53,12 +53,14 @@
         function handleButtonClick() {
             // You can define the functionality here later
             console.log("Button clicked! Define your function body here.");
+            const event = "webViewCallback";
             const message = {
                 status: "Callback",
                 type: "InitHdfc",
                 data: new Map(),
             };
-            window.webkit.messageHandlers.webViewCallback.postMessage(message);
+            webviewCallback.postMessage(event, message);
+            //window.webkit.messageHandlers.webViewCallback.postMessage(message);
             console.log("Init Hdfc Called.");
         }
     </script>
