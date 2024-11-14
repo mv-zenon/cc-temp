@@ -133,7 +133,7 @@
                     type: "InitHdfc",
                     data: JSON.stringify(payload),
                 };
-                window.webViewCallback.postMessage(JSON.stringify(message));
+                window.webEventCallback.postMessage(JSON.stringify(message));
             } catch (e) {
                 window.webViewCallback.printError(e.message);
             }
