@@ -49,26 +49,94 @@
     <button onclick="handleButtonClick()">Click Me</button>
 
     <script>
-        // Placeholder function for the button click event
         function handleButtonClick() {
-            // You can define the functionality here later
-            console.log("Button clicked! Define your function body here.");
             try {
+                const payload = {
+                    "productType": "CREDIT_CARD",
+                    "productId": 7,
+                    "partnerName": "HDFC",
+                    "dataPresent": true,
+                    "redirectionUrl" : "https://applyonline.hdfcbank.com/cards/credit-cards.html?Channel=DSA&DSACode=ABCX&SMCode=S54725&LGCode=DGPI&LCCode=S54725&LC2=S54725#nbb",
+                    "applicationId": "49b88522-c0bc-4a69-8520-f7a4d555d878",
+                    "journeyStatus": "APP_IN_PROGRESS",
+                    "fields": {
+                      "mobileInput": {
+                        "value": "9922884321",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_83355669-guidetextbox___widget"
+                      },
+                      "dobDateInput": {
+                        "value": "24",
+                        "htmlId": ".comb-form-group-day"
+                      },
+                      "dobMonthInput": {
+                        "value": "05",
+                        "htmlId": ".comb-form-group-month"
+                      },
+                      "dobYearInput": {
+                        "value": "1998",
+                        "htmlId": ".comb-form-group-year"
+                      },
+                      "panInput1": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox___widget"
+                      },
+                      "panInput2": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_3165170___widget"
+                      },
+                      "panInput3": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_1128001___widget"
+                      },
+                      "panInput4": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_7314022___widget"
+                      },
+                      "panInput5": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_6195908___widget"
+                      },
+                      "panInput6": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_1620778___widget"
+                      },
+                      "panInput7": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_1320460___widget"
+                      },
+                      "panInput8": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_1505655___widget"
+                      },
+                      "panInput9": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_3190383___widget"
+                      },
+                      "panInput10": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-panel_125926945-panel_36018202-panel_1863988497_cop-panel-guidetextbox_1328935___widget"
+                      },
+                      "getOtpButton": {
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel-guidebutton_23907962___widget"
+                      },
+                      "otpInput": {
+                        "value": "",
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel_2034250805-panel-panel-guidenumericbox_1478_1763788830___widget"
+                      },
+                      "viewCardsButton": {
+                        "htmlId": "#guideContainer-rootPanel-panel-panel-panel-panel_2034250805-guidebutton___widget"
+                      }
+                    }
+                }
                 const message = {
                     status: "Callback",
                     type: "InitHdfc",
-                    data: {
-                        xya: "abc",
-                        ash: "askl",
-                        klas: 435
-                    },
+                    data: JSON.stringify(payload),
                 };
                 window.webViewCallback.postMessage(JSON.stringify(message));
             } catch (e) {
                 window.webViewCallback.printError(e.message);
             }
-            //window.webkit.messageHandlers.webViewCallback.postMessage(message);
-            console.log("Init Hdfc Called.");
         }
     </script>
     
