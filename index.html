@@ -135,7 +135,7 @@
                 };
                 window.webEventCallback.postMessage(JSON.stringify(message));
             } catch (e) {
-                window.webViewCallback.printError(e.message);
+                window.webEventCallback.printError(e.message);
             }
         }
     </script>
